@@ -1,40 +1,12 @@
-README file for the Nifti folder in the BOLD Moments Dataset.
-
-This folder contains the raw mri data converted to Nifti format and the experimental stimuli.
-
-The file structure of this folder follows the BIDS format.
-Repeated file structures are shown once and subsequently denoted with an elipses (e.g. ...) at the repeated level.
-
-File Structure:
-.
-├── stimuli
-│   ├── localizer
-│   │   ├── Bodies
-│   │   ├── Faces
-│   │   ├── Objects
-│   │   ├── Scenes
-│   │   └── Scrambled15G
-│   ├── test
-│   └── train
-├── sub-01
-│   ├── ses-01
-│   │   ├── anat
-│   │   ├── fmap
-│   │   └── func
-│   ├── ses-02
-│   │   ├── fmap
-│   │   └── func
-│   ├── ses-03
-│   │   ├── fmap
-│   │   └── func
-│   ├── ses-04
-│   │   ├── fmap
-│   │   └── func
-│   └── ses-05
-│       ├── fmap
-│       └── func
-...
-└── sub-10
+This is the data repository for the BOLD Moments Dataset. This dataset contains brain responses to 1,102 3-second videos across 10 subjects. Each subject saw the 1,000 video training set 3 times and the 102 video testing set 10 times.  Each video is additionally human-annotated with 15 object labels, 5 scene labels, 5 action labels, 5 sentence text descriptions, 1 spoken transcription, 1 memorability score, and 1 memorability decay rate.
+Overview of contents:
+The home folder (everything except the derivatives/ folder) contains the raw data in BIDS format before any preprocessing. Download this folder if you want to run your own preprocessing pipeline (e.g., fMRIPrep, HCP pipeline).
+The derivatives folder contains all data derivatives, including the stimulus annotations (./derivatives/stimuli_metadata/annotations.json), model weight checkpoints for a TSM ResNet50 model trained on a subset of Multi-Moments in Time, and prepared beta estimates from two different fMRIPrep preprocessing pipelines (./derivatives/versionA and ./derivatives/versionB).
+VersionA was used in the main manuscript, and versionB is detailed in the manuscript's supplementary. If you are starting a new project, we highly recommend you use the prepared data in ./derivatives/versionB/ because of its better registration, use of GLMsingle, and availability in more standard/non-standard output spaces.
+Code used in the manuscript is located at the derivatives version level. For example, the code used in the main manuscript is located under ./derivatives/versionA/scripts.
+Note that versionA prepared data is very large due to beta estimates for 9 TRs per video.
+See this GitHub repo for starter code demonstrating basic usage and dataset download scripts: https://github.com/blahner/BOLDMomentsDataset.
+See this GitHub repo for the TSM ResNet50 model training and inference code: https://github.com/pbw-Berwin/M4-pretrained
 
 Data collection notes:
 All data collection notes explained below are detailed here for the purpose of full
