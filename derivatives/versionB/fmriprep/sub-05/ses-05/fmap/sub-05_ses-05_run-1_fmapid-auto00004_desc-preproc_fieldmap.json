@@ -1,0 +1,29 @@
+{
+  "AnatomicalReference": "sub-05_ses-05_run-1_fmapid-auto00004_desc-magnitude_fieldmap.nii.gz",
+  "AssociatedCoefficients": [
+    "sub-05_ses-05_run-1_fmapid-auto00004_desc-coeff0_fieldmap.nii.gz",
+    "sub-05_ses-05_run-1_fmapid-auto00004_desc-coeff1_fieldmap.nii.gz"
+  ],
+  "B0FieldIdentifier": "auto_00004",
+  "IntendedFor": [
+    "ses-05/func/sub-05_ses-05_task-test_run-1_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-test_run-2_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-test_run-3_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-10_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-1_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-2_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-3_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-4_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-5_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-6_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-7_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-8_bold.nii",
+    "ses-05/func/sub-05_ses-05_task-train_run-9_bold.nii"
+  ],
+  "RawSources": [
+    "/data/sub-05/ses-05/fmap/sub-05_ses-05_run-1_phasediff.nii",
+    "/data/sub-05/ses-05/fmap/sub-05_ses-05_run-1_magnitude1.nii",
+    "/data/sub-05/ses-05/fmap/sub-05_ses-05_run-1_magnitude2.nii"
+  ],
+  "Units": "Hz"
+}
