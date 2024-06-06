@@ -1,0 +1,56 @@
+{
+  "bmd_matrixfilename": {
+    "Description": "Filename of the video as used in some derivatives. Formatted as 'vid_idx{X}', where 'X' is the video number filled to 4 zeros"
+    },
+  "MiT_url": {
+    "Description": "URL link from the Moments in Time (MiT) dataset. BOLD Moments in not responsible for the upkeep of these URLs"
+  },
+  "MiT_filename": {
+    "Description": "Video filename used in the Moments in Time (MiT) dataset."
+  },
+  "set": {
+    "Description": "Whether this video is in the train or test set. Train set videos were repeated 3x per subject and test videos were repeated 10x per subject.",
+    "Levels": {
+      "train": "Stimuli belongs to the training set of videos (videos 0001-1000)",
+      "test": "Stimuli belongs to the testing set of videos (videos 1001-1102)"
+    }
+  },
+  "objects": {
+    "Description": "Object labels assigned by human annotators. Each set of 3 values in brackets corresponds to different labels by one human annotator. Each video was labeled by at least 5 different annotators.",
+    "Levels": {
+      "--": "Denotes that the annotator selected 'No more objects in video'",
+      "<label>": "Every other label besides '--' is from the THINGS database."
+    }
+  },
+  "scenes": {
+    "Description": "Scene labels assigned by human annotators. Each of the (at least) five human annotators selected one scene label used in the PLACES365 dataset."
+  },
+  "actions": {
+    "Description": "Action labels assigned by human annotators. Each of the (at least) five human annotators selected one scene label used in the Multi-Moments in Time dataset."
+  },
+  "text_descriptions": {
+    "Description": "Sentence text descriptions typed by human annotators. Descriptions were typed free-form."
+  },
+  "spoken_transcription": {
+    "Description": "One spoken description of the video transcribed into text. Original audio recordings are not available due to privacy considerations."
+  },
+  "memorability_score": {
+    "Description": "The memorability score of the video derived from a memory game with humans (see Memento10k, Newman et al., 2020). Values range from [0, 1]."
+  },
+  "memorability_decay": {
+    "Description": "The memorability decay rate of the video derived from a memory game with humans (see Memento10k, Newman et al., 2020). Theoretically, values should range from (-inf, 0) but experimentally, Newman and colleagues observed decay rates greater than 0. Depending on the analysis, one may wish to clip scores to 0."
+  },
+  "THINGS_uniqueID": {
+    "Description": "The 'unique ID' field from the THINGS database. Largely the same as the 'object' lables but differentiates homonyms (e.g., bat).",
+    "Levels": {
+      "--": "The annotator selected 'No more objects in video', so no unique ID is present.",
+      "<label>": "The unique ID from the THINGS database corresponding to the object label. The 'objects' and 'THINGS_uniqueID' labels share the same indexed position."
+    }
+  },
+  "PLACES365_classID": {
+    "Description": "The class ID used in the PLACES365 dataset that corresponds to the 'scenes' labels. The 'scenes' and 'PLACES365_classID' labels share the same indexed position."
+  },
+  "MiT_classID": {
+    "Description": "The class ID used in the Multi-moments in Time dataset that corresponds to the 'actions' labels. The 'actions' and 'MiT_classID' labels share the same indexed position."
+  }
+}
