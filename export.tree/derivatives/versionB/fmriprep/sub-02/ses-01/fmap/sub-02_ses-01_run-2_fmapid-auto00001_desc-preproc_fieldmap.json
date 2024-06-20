@@ -1,0 +1,20 @@
+{
+  "AnatomicalReference": "sub-02_ses-01_run-2_fmapid-auto00001_desc-magnitude_fieldmap.nii.gz",
+  "AssociatedCoefficients": [
+    "sub-02_ses-01_run-2_fmapid-auto00001_desc-coeff0_fieldmap.nii.gz",
+    "sub-02_ses-01_run-2_fmapid-auto00001_desc-coeff1_fieldmap.nii.gz"
+  ],
+  "B0FieldIdentifier": "auto_00001",
+  "IntendedFor": [
+    "ses-01/func/sub-02_ses-01_task-localizer_run-3_bold.nii",
+    "ses-01/func/sub-02_ses-01_task-localizer_run-4_bold.nii",
+    "ses-01/func/sub-02_ses-01_task-localizer_run-5_bold.nii",
+    "ses-01/func/sub-02_ses-01_task-rest_run-5_bold.nii"
+  ],
+  "RawSources": [
+    "/data/sub-02/ses-01/fmap/sub-02_ses-01_run-2_phasediff.nii",
+    "/data/sub-02/ses-01/fmap/sub-02_ses-01_run-2_magnitude1.nii",
+    "/data/sub-02/ses-01/fmap/sub-02_ses-01_run-2_magnitude2.nii"
+  ],
+  "Units": "Hz"
+}
