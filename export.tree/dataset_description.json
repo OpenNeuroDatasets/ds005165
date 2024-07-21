@@ -1,0 +1,34 @@
+{
+    "Name": "Modeling short visual events through the BOLD Moments video fMRI dataset and metadata.",
+    "BIDSVersion": "1.5.8",
+    "DatasetType": "raw",
+    "Authors": [
+        "Benjamin Lahner",
+        "Kshitij Dwivedi",
+        "Polina Iamshchinina",
+        "Monika Graumann",
+        "Alex Lascelles",
+        "Gemma Roig",
+        "Alessandro Thomas Gifford",
+        "Bowen Pan",
+        "SouYoung Jin",
+        "N.Apurva Ratan Murty",
+        "Kendrick Kay",
+        "Radoslaw Cichy*",
+        "Aude Oliva*"
+    ],
+    "Acknowledgements": "The experiments were conducted at the Athinoula A. Martinos Imaging Center at the McGovern Institute for Brain Research, Massachusetts Institute of Technology, on a Siemens PrismaFit 3T scanner (Erlangen, Germany) supported with funding from a NIH Shared Instrumentation Grant (1S10OD021569). We thank the MIT-IBM Watson AI Lab for support, and we also thank Santani Teng and Emilie Josephs for their valuable writing feedback.",
+    "HowToAcknowledge": "Lahner et al. Modeling short visual events through the BOLD Moments video fMRI dataset and metadata. Nature Communications, (2024).",
+    "Funding": [
+        "This research was funded by the Multidisciplinary University Research Initiative (MURI) award by the Army Research Office (grant No. W911NF-23-1-0277) to A.O; the Vannevar Bush Faculty Fellowship program funded by the Office of Naval Research (N00014-16-1-3116) to A.O.; the DFG (CI-241/1-1, CI241/1-3, CI-241/1-7) and ERC grant (ERC-2018-StG- 803370) to R.M.C.; the DFG (DFG Research Unit FOR 5368) and the Alfons and Gertrud Kassel foundation to G.R.; the MIT EECS MathWorks Fellowship to B.L.; Berlin School of Mind and Brain PhD scholarship to P.I.; the NIH grant R01EY034118 to K.K; K99/R00 Pathway to Independence Award from the National Eye Institute of the NIH (grant 1K99EY032603) to N.A.R.M. "
+    ],
+    "EthicsApprovals": [
+        "The experiment was conducted in accordance with the Declaration of Helsinki and approved by the local ethics committee (Institutional Review Board of Massachusetts Institute of Technology, approval code: 1510287948)"
+    ],
+    "DatasetDOI": "doi:10.18112/openneuro.ds005165.v1.0.4",
+    "License": "CC0",
+    "ReferencesAndLinks": [
+        "starter code: https://github.com/blahner/BOLDMomentsDataset",
+        "TSM ResNet50 Model trained on M4:  https://github.com/pbw-Berwin/M4-pretrained"
+    ]
+}

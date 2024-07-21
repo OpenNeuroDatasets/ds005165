@@ -1,0 +1,29 @@
+{
+  "onset": {
+    "Description": "Onset of the event measured from the beginning of the acquisition of the first volume in the corresponding task imaging data file.",
+    "Units": "seconds"
+    },
+  "duration": {
+    "Description": "Duration of the event (measured from onset) in seconds.",
+    "Units": "seconds"
+  },
+  "stim_file": {
+    "LongName": "Stimulus File",
+    "Description": "Represents the location of the stimulus file (e.g. videos) presented at the given onset time. The values under the stim_file column correspond to a path relative to '/stimuli'."
+  },
+  "trial_type": {
+    "Description": "Primary categorization of each trial to identify them as oddball or task-related. Within a run, stimuli will be labelled as either be train or test, but not mixed.",
+    "Levels": {
+      "train": "Stimuli belongs to the training set of videos (videos 0000-1000)",
+      "test": "Stimuli belongs to the testing set of videos (videos 1001-1102)",
+      "oddball": "Fixation cross darkened, no stimuli presented. Signals to the participant to press a button. Purpose is to monitor participant's engagement with primary task."
+    }
+  },
+  "value": {
+    "Description": "Value of participant's button press to indicate oddball trial. Button press only registered on oddball trials, as indicated by trial_type.",
+    "Levels": {
+      "0": "Unsucessful/no button press.",
+      "1": "Successful Button press."
+    }
+  }
+}

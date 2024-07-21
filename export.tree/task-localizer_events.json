@@ -1,0 +1,35 @@
+{
+  "onset": {
+    "Description": "Onset of the event measured from the beginning of the acquisition of the first volume in the corresponding task imaging data file.",
+    "Units": "seconds"
+    },
+  "duration": {
+    "Description": "Duration of the event (measured from onset) in seconds.",
+    "Units": "seconds"
+  },
+  "stim_file": {
+    "LongName": "Stimulus File",
+    "Description": "Represents the location of the stimulus file presented at the given onset time. The values under the stim_file column correspond to a path relative to '/stimuli'."
+  },
+  "trial_type": {
+    "Description": "Primary categorization of each trial to identify them as instances of the experimental conditions.",
+    "Levels": {
+      "fix": "Fixation trial. No stimuli presented, just a blank gray screen.",
+      "faces": "Faces trial. Stimuli were videos of human faces.",
+      "bodies": "Bodies trial. Stimuli were videos of human bodies.",
+      "scenes": "Scenes trial. Stimuli were videos of scenes.",
+      "objects": "Objects trial. Stimuli were videos of objects.",
+      "scrambled": "Scrambled trial. Stimuli were scrambled versions of other videos in the stimuli set such that no meaningful concepts appeared in the scrambled video."
+    }
+  },
+  "block": {
+    "Description": "Signifies the current block in the experiment. The duration of a block is 18 seconds. There are 25 blocks in one run. Blocks are separated by their trial_type."
+  },
+  "hit": {
+    "Description": "Value of participant's button press on one-back trials (the second of two consecutive repitions of the same video). All trials that are not one-back trials are denoted with 'n/a' as button press was only registered on one-back trials.",
+    "Levels": {
+      "0": "Unsucessful/no button press.",
+      "1": "Successful Button press."
+    }
+  }
+}

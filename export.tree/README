@@ -1,0 +1,56 @@
+This is the data repository for the BOLD Moments Dataset. This dataset contains brain responses to 1,102 3-second videos across 10 subjects. Each subject saw the 1,000 video training set 3 times and the 102 video testing set 10 times.  Each video is additionally human-annotated with 15 object labels, 5 scene labels, 5 action labels, 5 sentence text descriptions, 1 spoken transcription, 1 memorability score, and 1 memorability decay rate.
+
+Overview of contents:
+
+The home folder (everything except the derivatives/ folder) contains the raw data in BIDS format before any preprocessing. Download this folder if you want to run your own preprocessing pipeline (e.g., fMRIPrep, HCP pipeline).
+
+To comply with licensing requirements, the stimulus set is not available here on OpenNeuro (hence the invalid BIDS validation). See the GitHub repository (https://github.com/blahner/BOLDMomentsDataset) to download the stimulus set and stimulus set derivatives (like frames). To make this dataset perfectly BIDS compliant for use with other BIDS-apps, you may need to copy the 'stimuli' folder from the downloaded stimulus set into the parent directory.
+
+The derivatives folder contains all data derivatives, including the stimulus annotations (./derivatives/stimuli_metadata/annotations.json), model weight checkpoints for a TSM ResNet50 model trained on a subset of Multi-Moments in Time, and prepared beta estimates from two different fMRIPrep preprocessing pipelines (./derivatives/versionA and ./derivatives/versionB).
+
+VersionA was used in the main manuscript, and versionB is detailed in the manuscript's supplementary. If you are starting a new project, we highly recommend you use the prepared data in ./derivatives/versionB/ because of its better registration, use of GLMsingle, and availability in more standard/non-standard output spaces.
+Code used in the manuscript is located at the derivatives version level. For example, the code used in the main manuscript is located under ./derivatives/versionA/scripts.
+Note that versionA prepared data is very large due to beta estimates for 9 TRs per video.
+See this GitHub repo for starter code demonstrating basic usage and dataset download scripts: https://github.com/blahner/BOLDMomentsDataset.
+See this GitHub repo for the TSM ResNet50 model training and inference code: https://github.com/pbw-Berwin/M4-pretrained
+
+Data collection notes:
+All data collection notes explained below are detailed here for the purpose of full
+transparency and should be of no concern to researchers using the data i.e. these
+inconsistencies have been attended to and integrated into the BIDS format as if these
+exceptions did not occur. The correct pairings between field maps and functional runs
+are detailed in the .json sidecars accompanying each field map scan.
+
+Subject 2:
+Session 1: Subject repositioned head for comfort after the third resting state scan, 
+approximately 1 hour into the session. New scout and field map scans were taken. 
+In the case of applying a susceptibility distortion correction analysis, session 
+1 therefore has two sets of field maps, denoted by “run-1” and “run-2” in the 
+filename. The “IntendedFor” field in the field map’s identically named .json sidecar 
+file specifies which functional scans correspond to which field map.
+
+Session 4: Completed over two separate days due to subject feeling sleepy. All 3 
+testing runs and 6/10 training runs were completed on the first day, and the last 
+4 training runs were completed on the second day. Each of the two days for session 
+4 had its own field map. This did not interfere with session 5. All scans across 
+both days belonging to session 4 were analyzed as if they were collected on the same 
+day. In the case of applying a susceptibility distortion correction analysis, session 
+4 therefore has two sets of field maps, denoted by “run-1” and “run-2” in the filename. 
+The “IntendedFor” field in the field map’s identically named .json sidecar file 
+specifies which functional scans correspond to which field map.
+
+Subject 4:
+Sessions 1 and 2: The fifth (out of 5) localizer run from session 1 was completed at 
+the end of session 2 due to a technical error. This localizer run therefore used the 
+field map from session 2. In the case of applying a susceptibility distortion correction 
+analysis, session 1 therefore has two sets of field maps, denoted by “run-1” and 
+“run-2” in the filename. The “IntendedFor” field in the field map’s identically named 
+.json sidecar file specifies which functional scans correspond to which field map. 
+
+Subject 10:
+Session 5: Subject moved a lot to readjust earplug after the third functional run (1 
+test and 2 training runs completed). New field map scans were collected. In the case of
+ applying a susceptibility distortion correction analysis, session 5 therefore has two 
+sets of field maps, denoted by “run-1” and “run-2” in the filename. The “IntendedFor” 
+field in the field map’s identically named .json sidecar file specifies which 
+functional scans correspond to which field map.
